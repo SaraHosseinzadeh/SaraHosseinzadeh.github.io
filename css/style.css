@@ -2337,6 +2337,106 @@ section {
   }
 }
 
+/* Education Section – prominent for academic site */
+.education {
+  background: var(--bg-primary);
+  padding: 80px 0;
+  scroll-margin-top: 56px;
+}
+
+.education-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.education-header .section-label {
+  color: #e6007a;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: none;
+  margin: 0;
+  display: block;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.education-header .section-label:hover {
+  transform: scale(1.05);
+  color: #ff6b9d;
+}
+
+.education-header h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #e6007a;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.education-header p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+[data-theme="dark"] .education-header p {
+  color: #d4d4d4 !important;
+}
+
+/* Education timeline: left-to-right (left-aligned) text */
+.education .timeline-item.left,
+.education .timeline-item.right {
+  text-align: left;
+  padding: 0 50px; /* same padding so both content boxes are equal width */
+}
+
+.education .timeline-content,
+.education .timeline-content ul,
+.education .timeline-content li {
+  text-align: left;
+}
+
+/* Equal-width content boxes for M.Sc. and B.Sc. */
+.education .timeline-content {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Wider timeline so both degree boxes are significantly larger */
+.education .timeline {
+  max-width: 1800px;
+}
+
+/* Same placement as Experience: left box beside timeline left, right box beside timeline right (not pushed to edges) */
+.education .timeline-item.left {
+  left: 0;
+  width: 48%;
+  padding: 0 50px 0 0;
+}
+
+.education .timeline-item.right {
+  left: 50%;
+  right: auto;
+  width: 48%;
+  padding: 0 0 0 50px;
+}
+
+/* Center the M.Sc. timeline circle vertically and on the pink line */
+.education .timeline-item.left::before {
+  top: 5% !important;
+  right: -24px !important; /* move circle left so it sits on center timeline */
+  left: auto !important;
+  transform: translateX(50%) translateY(-50%) !important;
+}
+
+.education .timeline-item.right::before {
+  top: 10%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
 /* Experience Section */
 .experience {
   background: var(--card-bg);
@@ -2471,7 +2571,8 @@ section {
 
 .timeline-item.left .timeline-date {
   position: absolute;
-  right: -260px;
+  top: -1%;
+  right: -170px;
   background: linear-gradient(135deg, #e6007a, #ff6b9d);
   color: white;
   padding: 8px 16px;
@@ -2496,8 +2597,9 @@ section {
 
 
 .timeline-item.right .timeline-date {
+  top: 3%;
   position: absolute;
-  left: -220px;
+  left: -145px;
   background: linear-gradient(135deg, #e6007a, #ff6b9d);
   color: white;
   padding: 8px 16px;
