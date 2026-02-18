@@ -722,6 +722,7 @@ p {
   width: 24px;
   text-align: center;
   color: #e6007a;
+  margin-top: 4px;
   margin-bottom: 8px;
 }
 
@@ -1624,33 +1625,44 @@ p {
 
 .skills-section {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto auto; /* two rows so col5 can stack two cards */
   gap: 16px;
   margin-top: 0px;
 }
 
-.skills-category {
-  width: 100%;
-  max-width: none;
-  min-width: 0;
-  margin: 0;
-  box-sizing: border-box;
-  background: var(--card-bg);
-  border-radius: 18px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
-  padding: 24px 18px 18px 18px;
+/* First 4 columns span both rows so their height matches col5 (RA + Simulation) */
+.skills-section .skills-category:nth-child(1),
+.skills-section .skills-category:nth-child(2),
+.skills-section .skills-category:nth-child(3),
+.skills-section .skills-category:nth-child(4) {
+  grid-row: 1 / -1;
 }
 
-/* Specific styling for Development Tools to make it more compact */
-.skills-category:nth-child(3) {
-  min-height: 180px;
+/* Column 5: Resource Allocation (top), Simulation (bottom) – two separate cards */
+.skills-section .skills-category.skills-col5-top {
+  grid-column: 5;
+  grid-row: 1;
+}
+
+.skills-section .skills-category.skills-col5-bottom {
+  grid-column: 5;
+  grid-row: 2;
 }
 
 /* Responsive design for smaller screens */
 @media (max-width: 1200px) {
   .skills-section {
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
     gap: 15px;
+  }
+
+  .skills-section .skills-category,
+  .skills-section .skills-category.skills-col5-top,
+  .skills-section .skills-category.skills-col5-bottom {
+    grid-column: auto;
+    grid-row: auto;
   }
 }
 
@@ -1659,7 +1671,7 @@ p {
     grid-template-columns: 1fr;
     gap: 15px;
   }
-} 
+}
 .story-layout {
   display: flex;
   align-items: stretch;
