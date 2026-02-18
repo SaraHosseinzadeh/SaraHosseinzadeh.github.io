@@ -2443,6 +2443,47 @@ section {
   padding: 80px 0;
   scroll-margin-top: 56px;
 }
+/* Experience cards text alignment and height (use global timeline widths) */
+.experience .timeline-content {
+  box-sizing: border-box;
+  min-height: 260px;
+  text-align: left;
+}
+
+.experience .timeline-content ul,
+.experience .timeline-content li {
+  text-align: left;
+}
+
+/* Make only the second (Senior Industrial Engineer) box a bit wider */
+.experience .timeline-item.experience-second {
+  width: 50%;
+}
+
+/* Nudge only the third (Hiweb) experience date pill a bit left */
+.experience .experience-date-third {
+  position: relative;
+  left: 935px;
+  width: 15%;
+  top: 1% !important;
+}
+
+.experience .experience-date-second {
+  top: 1% !important;
+}
+
+.experience .experience-date-first {
+  position: relative;
+  left: 935px;
+  width: 17%;
+  top: 1% !important;
+}
+
+/* Company/location lines under job titles in Experience */
+.experience .timeline-content h4 {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
 
 .experience-header {
   text-align: center;
@@ -2480,6 +2521,10 @@ section {
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
+}
+
+.experience .timeline-item.left {
+  left: -300px;   /* try -20px; adjust to -10, -30, etc. */
 }
 
 /* Timeline Styles */
@@ -2563,7 +2608,7 @@ section {
 }
 
 .timeline-item.left::before {
-  right: -62px; /* Move closer to center line */
+  right: -60px; /* Move closer to center line */
   transform: translateX(50%);
 }
 
@@ -2571,8 +2616,8 @@ section {
 
 .timeline-item.left .timeline-date {
   position: absolute;
-  top: -1%;
-  right: -170px;
+  top: -2%;
+  right: -175px;
   background: linear-gradient(135deg, #e6007a, #ff6b9d);
   color: white;
   padding: 8px 16px;
@@ -2581,6 +2626,10 @@ section {
   font-weight: 600;
   white-space: nowrap;
   box-shadow: 0 4px 15px rgba(230, 0, 122, 0.3);
+}
+
+.timeline-item.experience {
+  width: 70%;
 }
 
 /* Right side items */
@@ -2621,6 +2670,10 @@ section {
   position: relative;
 }
 
+.timeline-content.experience-second-content {
+  width: 180%;
+}
+
 .timeline-content:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
@@ -2639,6 +2692,7 @@ section {
   font-weight: 600;
   color: #e6007a;
   margin-bottom: 8px;
+  margin-top: 8px;
 }
 
 .timeline-content .duration {
@@ -2866,7 +2920,7 @@ section {
   }
   
   .timeline-content {
-    padding: 40px;
+    padding: 20px;
   }
 }
 
@@ -3106,4 +3160,8 @@ section {
   .hero-image img { width: 190px; height: 190px; }
 
   .hero-text h1 { font-size: 1.8rem; }
+}
+
+.exprience-first-item {
+left: -100px;
 }
