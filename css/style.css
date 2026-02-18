@@ -1851,6 +1851,11 @@ section {
   margin-top: 40px;
 }
 
+/* Make teaching experience cards wider (2 per row instead of 4) */
+#teaching .courses-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .course-card {
   background: var(--bg-primary);
   border-radius: 16px;
