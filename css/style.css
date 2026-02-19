@@ -4061,6 +4061,18 @@ section {
   color: #d4d4d4 !important;
 }
 
+[data-theme="dark"] .social-link {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(230, 0, 122, 0.6);
+  color: #e6007a;
+}
+
+[data-theme="dark"] .social-link:hover {
+  background: #e6007a;
+  color: white;
+  border-color: #e6007a;
+}
+
 [data-theme="dark"] .project-title {
   color: #d4d4d4 !important;
 }
