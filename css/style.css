@@ -1686,7 +1686,7 @@ p {
   flex: 3;
   background: #f8f9fa;
   border-radius: 16px;
-  padding: 40px;
+  padding: 16px 40px 56px 40px;
   display: flex;
   align-items: flex-start;
   transition: all 0.3s ease;
@@ -1888,7 +1888,7 @@ section {
   
   .story-text {
     flex: none;
-    padding: 30px 20px;
+    padding: 30px 20px 46px 20px;
   }
   
   .info-boxes {
